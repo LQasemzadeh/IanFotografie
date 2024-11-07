@@ -1,27 +1,38 @@
 import React from 'react';
 import Link from "next/link";
 import { HiMenuAlt3 } from "react-icons/hi";
+import {create as item} from "eslint-plugin-react/lib/rules/sort-prop-types";
+
+const listItems = [
+    'Home',
+    'Gallery',
+    'About',
+    'Contact'
+]
 
 
 const Navbar = () => {
     return (
-        <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center">
-                <div>
-                    <img src="/assets/Logo/logo-transparent-png.png"
-                    className="w-1/6 cursor-pointer"/>
-                </div>
-                <div>
-                    <HiMenuAlt3 className="block md:hidden h-8 w-8 cursor-pointer"/>
-                </div>
-                <ul className="space-x-8 hidden md:block">
-                    <Link href="/about"><a className="uppercase font-semibold">Home</a></Link>
-                    <Link href="/services"><a>Gallery</a></Link>
-                    <Link href="/services"><a>About</a></Link>
-                    <Link href="/contact"><a>Contact</a></Link>
+        <div className="mt-5">
+            <div className="fixed bg-white flex justify-between items-center gap-16
+         py-3 px-10 translate-x-[-50%] left-1/4 rounded-full
+         bg-opacity-30 text-black shadow-lg z-40">
+                <img src="/assets/Logo/logo-transparent-png.png" className="w-16 cursor-pointer"/>
+                <ul className="flex gap-8 text-xl font-semibold">
+                    {
+                        listItems.map((item, index) => (
+                            <li key={index} className="cursor-pointer text-sm">
+                                <Link href={`/${item.toLowerCase()}`}>
+                                    <a>
+                                        {item}
+                                    </a>
+                                </Link>
+                            </li>
+                        ))
+                    }
                 </ul>
             </div>
-        </nav>
+        </div>
     );
 };
 
