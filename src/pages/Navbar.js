@@ -22,7 +22,7 @@ const Navbar = () => {
             <ul className="flex space-x-4 text-md font-semibold sm:gap-4 sm:text-xl">
                 {
                     listItems.map((item, index) => (
-                        <li key={index} className="cursor-pointer text-sm sm:text-sm">
+                        <li key={index} className="cursor-pointer text-sm font-Inria sm:text-sm">
                             <Link href={`/${item.toLowerCase()}`}>
                                 <a>
                                     {item}
