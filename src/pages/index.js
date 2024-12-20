@@ -5,6 +5,7 @@ import Hero from "@/pages/Hero";
 import Navbar from "@/pages/Navbar";
 import Gallery from "@/pages/Gallery";
 import About from "@/pages/About";
+import Footer from "@/pages/Footer";
 
 export default function Home() {
     const { user } = useAuth({ middleware: 'guest' })
@@ -19,6 +20,7 @@ export default function Home() {
             <Hero />
             <Gallery />
             <About />
+            <Footer />
 
 
         </>

@@ -15,7 +15,7 @@ const About = () => {
             {/* Right Section */}
             <div className="space-y-6">
                 <h2 className="text-5xl font-bold">
-                    About Me<span className="text-black">.</span>
+                    About Me<span className="text-black"></span>
                 </h2>
                 <p className="text-gray-600">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
